@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>BIN checker</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="scripts.js"></script>
+</head>
+<body>
+<h1 align="center" id="page_title">Check BIN</h1>
+<div class="container">
+    <input
+            type="text"
+            id="bin_number"
+            name="bin_number"
+            placeholder="Enter BIN number"
+            maxlength="8"
+            onsubmit='CheckBinNumber();'
+    >
+    <input
+            type="submit"
+            name="Submit"
+            id="btn_id"
+            value="Apply"
+            onclick='CheckBinNumber();'
+    >
+    <div id="error"></div>
+    <script>
+        (function () {
+            document.querySelector('input').addEventListener('keydown', function (e) {
+                if (e.keyCode === 13) {
+                    CheckBinNumber();
+                }
+            });
+        })();
+    </script>
+</div>
+<div class="container">
+    <h2 align="center" id="bin_info_title">BIN Info</h2>
+    <table class="table">
+        <tbody>
+        <tr id="row_bin">
+            <td>BIN</td>
+            <td id="bin"></td>
+        </tr>
+        <tr id="row_brand">
+            <td>Brand</td>
+            <td id="brand"></td>
+        </tr>
+        <tr id="row_type">
+            <td>Type</td>
+            <td id="type"></td>
+        </tr>
+        <tr id="row_category">
+            <td>Category</td>
+            <td id="category"></td>
+        </tr>
+        <tr id="row_issuer">
+            <td>Issuer</td>
+            <td id="issuer"></td>
+        </tr>
+        <tr id="row_alpha_2">
+            <td>Alpha 2</td>
+            <td id="alpha_2"></td>
+        </tr>
+        <tr id="row_alpha_3">
+            <td>Alpha 3</td>
+            <td id="alpha_3"></td>
+        </tr>
+        <tr id="row_country">
+            <td>Country</td>
+            <td id="country"></td>
+        </tr>
+        <tr id="row_latitude">
+            <td>Latitude</td>
+            <td id="latitude"></td>
+        </tr>
+        <tr id="row_longitude">
+            <td>Longitude</td>
+            <td id="longitude"></td>
+        </tr>
+        <tr id="row_bank_phone">
+            <td>Bank phone</td>
+            <td id="bank_phone"></td>
+        </tr>
+        <tr id="row_bank_url">
+            <td>Bank URL</td>
+            <td id="bank_url"></td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+</body>
+</html>
